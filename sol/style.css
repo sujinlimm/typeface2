@@ -1,0 +1,752 @@
+@font-face {
+  font-family: "sol";
+  src: url("RyuGothicOTF-Bold.woff"), url("RyuGothicOTF-Bold.woff2"),
+    url("RyuGothicOTF-Bold.eot");
+}
+
+/*----------------------------- 스크롤바 ------------------------------*/
+
+*,
+html,
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(245, 245, 245);
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #4b6eff;
+}
+
+.background {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: RGB(20, 20, 20);
+  height: 100vh;
+}
+
+.background.one {
+  background-image: url(sol_img/main_1.png);
+}
+
+.background3 {
+  width: 100%;
+  height: 106vh;
+  background-color: rgb(245, 245, 245);
+}
+
+/*-------------------------- 메뉴 ---------------------------*/
+
+nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: transparent;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 18%;
+}
+
+nav ul li {
+  width: 72px;
+  height: 24px;
+  margin-right: 60px;
+  margin-top: 16px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  float: left;
+}
+
+nav ul li a {
+  width: 72px;
+  height: 24px;
+  text-decoration: none;
+  color: #4b6eff;
+}
+
+#first_link {
+  padding-bottom: 4px;
+  border-bottom: 2px solid #4b6eff;
+}
+
+#second_link:hover {
+  color: #4b6eff;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #4b6eff;
+}
+
+/*------------------------ 후원하기 -------------------------*/
+
+#support {
+  width: 92px;
+  height: 32px;
+  position: absolute;
+  top: 16px;
+  right: 19%;
+  cursor: pointer;
+
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  color: RGB(235, 235, 235);
+  background-color: #4b6eff;
+  border: none;
+
+  border-radius: 20px;
+}
+
+/*----------------------- 타이핑 화면 ------------------------*/
+
+#preview {
+  width: 64.58%;
+  height: 660px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+#main_preview {
+  width: 100%;
+  height: 100%;
+  color: RGB(20, 20, 20);
+
+  writing-mode: tb-rl;
+  font-family: "sol";
+  font-size: 27pt;
+  line-height: 56pt;
+
+  word-break: keep-all;
+  overflow: scroll;
+  letter-spacing: 1;
+  word-spacing: 1;
+}
+
+/*------------------------ 조절메뉴 / 소개글 -------------------------*/
+
+article {
+  width: 64.58%;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 68px;
+  display: flex;
+  flex-direction: row;
+}
+
+.font_test {
+  width: 48.17%;
+  height: 200px;
+  margin-right: 3.03%;
+  position: relative;
+}
+
+.intro {
+  width: 48.17%;
+  height: 200px;
+  position: relative;
+}
+
+.title {
+  width: 100%;
+  height: 24px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+/*------------------------ 왼쪽 -------------------------*/
+
+.content {
+  width: 100%;
+  height: 78%;
+  border-radius: 20px;
+  margin-top: 8px;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(232, 232, 232);
+}
+
+#typingText {
+  border: none;
+  color: #4b6eff;
+  width: 98%;
+  margin-top: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  height: 20px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+}
+
+#typing {
+  margin-left: 0px;
+  width: 93%;
+  height: 58px;
+  margin: 0 auto;
+  margin-top: 10px;
+  position: relative;
+}
+
+#range_Bts {
+  width: 92%;
+  margin: 0 auto;
+}
+
+#range_Bts input {
+  height: 30px;
+}
+
+.input_button {
+  /** 조절정도 와 버튼높이 나란히 **/
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+}
+
+.input_button_range {
+  /** 버튼높이 **/
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+}
+
+.input_button input {
+  /**버튼**/
+  flex-direction: row;
+  width: 48%;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.input_button_title {
+  width: 60%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+
+#typingText::placeholder {
+  color: #4b6eff;
+  font-size: 1.2rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background-color: rgb(210, 210, 210);
+  border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #ffffff;
+  cursor: pointer;
+  border: 1px solid #4b6eff;
+  background-color: #4b6eff;
+  height: 16px;
+  width: 16px;
+  border-radius: 30px;
+  margin-top: -5px;
+  transition: 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  border: 1px solid #4b6eff;
+  background-color: #4b6eff;
+}
+
+input[type="range"]::-webkit-slider-runnable-track:hover {
+  background-color: rgb(75, 110, 255, 0.2);
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  border: 1px solid #4b6eff;
+  background-color: #4b6eff;
+}
+
+input[type="range"]::-webkit-slider-runnable-track:active {
+  background-color: rgb(75, 110, 255, 0.2);
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/*------------------------ 가로/세로 변경 -------------------------*/
+
+#changeB {
+  font-size: 8pt;
+  width: 100px;
+  height: 32px;
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 1.2rem;
+  background-color: #4b6eff;
+  border: solid 2px #4b6eff;
+  border-radius: 15px;
+  color: RGB(245, 245, 245);
+  cursor: pointer;
+  margin-left: 0;
+}
+
+#changeB:hover {
+  color: RGB(245, 245, 245);
+  margin-left: 0;
+}
+
+#titleChange {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+input[type="button"]:focus {
+  outline: none;
+}
+
+/*------------------------ 오른쪽 -------------------------*/
+
+.content2 {
+  width: 95%;
+  height: 70%;
+  margin: 0 auto;
+  margin-top: 16px;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  word-break: keep-all;
+  position: absolute;
+}
+
+/*------------------------예시이미지 -------------------------*/
+
+.background.four {
+  background-size: 100%;
+  background-image: url(sol_img/build_1.png);
+}
+
+aside {
+  /*background5*/
+  background-color: RGB(20, 20, 20);
+  background-image: url(sol_img/build_2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100%;
+  height: 160vh;
+}
+
+.pade {
+  background-image: url(sol_img/build_3.png);
+  transition: 0.4s;
+}
+
+.background.six {
+  background-image: url(sol_img/sketch.png);
+}
+
+.background.seven {
+  height: 102vh;
+}
+
+.Slides {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: RGB(20, 20, 20);
+}
+
+#sliderBs {
+  position: absolute;
+  top: 44%;
+  height: 20%;
+  width: 100%;
+}
+
+.sliderB {
+  background-color: RGB(20, 20, 20);
+  font-size: 2.5em;
+  color: RGB(245, 245, 245);
+  width: 60px;
+  height: 60px;
+
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.sliderB:nth-child(1) {
+  margin-left: 15%;
+}
+
+.sliderB:nth-child(2) {
+  margin-left: 63%;
+}
+
+.sliderB:hover {
+  color: #4b6eff;
+}
+
+.mySlides {
+  background-color: RGB(20, 20, 20);
+}
+
+/*------------------------ Footer -------------------------*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.2rem;
+  background-color: RGB(20, 20, 20);
+  height: 140px;
+}
+
+.footer ul {
+  background-color: RGB(20, 20, 20);
+  color: RGB(235, 235, 235);
+  width: 63%;
+  height: 28px;
+  list-style: none;
+  margin: 0 auto;
+  margin-top: 1%;
+}
+
+.footer ul li {
+  background-color: RGB(20, 20, 20);
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100px;
+  line-height: 2rem;
+}
+
+.footer ul li:nth-child(2) {
+  margin-left: 2%;
+  width: 400px;
+}
+
+.footer ul li:nth-child(3) {
+  width: 140px;
+  margin-left: 4%;
+}
+
+.footer ul li:nth-child(4) {
+  width: 10px;
+  margin-left: 36%;
+}
+
+.footer ul li a:nth-child(1) {
+  text-decoration: none;
+  color: #4b6eff;
+}
+
+.footer ul li a:nth-child(2) {
+  color: RGB(235, 235, 235);
+  text-decoration: none;
+}
+
+@media all and (max-width: 1680px) {
+  #preview {
+    height: 500px;
+    padding-top: 120px;
+  }
+
+  .footer ul li:nth-child(3) {
+    margin-left: 6%;
+  }
+
+  .footer ul li:nth-child(4) {
+    margin-left: 26%;
+  }
+
+  .footer {
+    height: 120px;
+  }
+}
+
+@media all and (max-width: 1440px) {
+  #support {
+    width: 74px;
+  }
+
+  nav ul li,
+  #support,
+  #changeB,
+  #typingText::placeholder,
+  .content2,
+  .title,
+  .input_button_title {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .input_button_title {
+    height: 32px;
+  }
+
+  #titleChange {
+    width: 82px;
+    height: 28px;
+    font-size: 1rem;
+    background-color: #4b6eff;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  #changeB {
+    position: absolute;
+    top: -1px;
+    left: -8px;
+    width: 100;
+    height: 20;
+    background-color: transparent;
+    border: none;
+  }
+
+  #preview {
+    height: 460px;
+    padding-top: 120px;
+  }
+
+  .content {
+    margin-top: 0;
+    height: 140px;
+  }
+
+  .background3 {
+    height: 114vh;
+  }
+
+  article {
+    margin-top: 48px;
+  }
+
+  .footer ul li:nth-child(2) {
+    width: 300px;
+    margin-left: 0.2%;
+  }
+
+  .footer ul li:nth-child(3) {
+    width: 140px;
+    margin-left: 6%;
+  }
+
+  .footer ul li:nth-child(4) {
+    width: 10px;
+    margin-left: 28%;
+  }
+
+  .footer ul {
+    margin-top: 2%;
+    font-size: 1rem;
+  }
+
+  .font_test {
+    height: 188px;
+  }
+
+  .intro {
+    height: 184px;
+  }
+
+  .input_button_range {
+    /** 버튼높이 **/
+    height: 68px;
+  }
+
+  #typingText {
+    width: 97%;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  #preview {
+    height: 380px;
+    padding-top: 100px;
+  }
+
+  .footer ul li:nth-child(4) {
+    width: 10px;
+    margin-left: 19%;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .background.one,
+  .background.two,
+  .background.four,
+  aside,
+  .pade,
+  .background.six,
+  .background.seven,
+  #changeB,
+  .title,
+  #linePt,
+  #line,
+  #typing span,
+  #titleChange {
+    display: none;
+  }
+
+  nav ul {
+    margin-left: 20px;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0;
+    margin-top: 18px;
+  }
+
+  nav ul li a {
+    width: 72px;
+    height: 24px;
+    text-decoration: none;
+    color: #4b6eff;
+    float: left;
+  }
+
+  .background3 {
+    height: 740px;
+  }
+
+  .content2 {
+    height: 204px;
+  }
+
+  #text {
+    padding-bottom: 20px;
+  }
+
+  #first_link,
+  #second_link {
+    font-size: 1rem;
+  }
+
+  #first_link {
+    width: 48px;
+  }
+
+  #second_link {
+    width: 30px;
+  }
+
+  #support {
+    background: linear-gradient(to bottom, #4b6eff, #4b6eff);
+    background-color: blue;
+    font-size: 1rem;
+    width: 92px;
+    position: absolute;
+    right: 20px;
+  }
+
+  #preview {
+    width: 90%;
+    height: 240px;
+    padding-top: 80px;
+    margin-bottom: 0;
+    overflow: scroll;
+  }
+
+  #main_preview {
+    height: 100%;
+    font-size: 18pt;
+    line-height: 40pt;
+  }
+
+  article {
+    height: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    order: 0;
+  }
+
+  .font_test,
+  .intro {
+    width: 100%;
+  }
+
+  .input_button_title,
+  #typingText::placeholder,
+  .content2 {
+    font-size: 1rem;
+  }
+
+  .input_button_range {
+    width: 60%;
+  }
+
+  #range_Bts {
+    width: 84%;
+  }
+
+  .content2 {
+    margin-top: 20px;
+    width: 100%;
+    line-height: 2rem;
+    text-align: center;
+  }
+
+  .content {
+    height: 120px;
+  }
+
+  .font_test {
+    height: 120px;
+    margin-top: 20px;
+  }
+
+  #typingText {
+    height: 17px;
+    width: 96%;
+  }
+
+  .intro {
+    height: 260px;
+  }
+}
